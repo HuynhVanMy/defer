@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
+
+    <!-- <script type="text/javascript">
+
+        function getUrlParam(param) {
+            var parameters = window.location.search.substring(1);
+            var sURLVariables = parameters.split('&');
+            console.log(sURLVariables);
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == param) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        var token = getUrlParam(token);
+
+        var androidIntentUrl = "intent://huynhvanmy.github.io/defer/" + window.location.search + "#Intent;scheme=http;package=com.myhv.deferdeeplink;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails?id=com.myhv.deferdeeplink&referrer=droid%2Fcolor" + window.location.search + ";end";
+
+        var isMobile = {
+            Windows: function () {
+                return /IEMobile|Windows Phone|Lumia/i.test(navigator.userAgent);
+            },
+            Android: function () {
+                return /Android/i.test(navigator.userAgent);
+            },
+            iPhone: function () {
+                return /iPhone/i.test(navigator.userAgent);
+            }
+        };
+
+        // Windows return both android and iPhone in it's identity, need to check first.
+        if (!isMobile.Windows()) {
+            if (isMobile.Android()) {
+                window.location = androidIntentUrl;
+            }
+
+            if (isMobile.iPhone()) {
+                //window.location=appleStoreUrl;
+            }
+        }
+
+        /******************************************************************/
+    </script> -->
+
 </head>
+
 <body>
     <h1>Hello world!!!</h1>
+    <h2 id="param"></h2>
+
+    <script>
+        document.getElementById("param").innerHTML = "New text!";
+    </script>
 </body>
+
 </html>
